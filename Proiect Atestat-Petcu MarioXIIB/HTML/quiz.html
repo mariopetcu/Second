@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz - Regiunile Asiei</title>
+  <link rel="stylesheet" href="../CSS/styletari.css">
+  <style>
+    .quiz-container {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #1a3e6e;
+    }
+
+    .question {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin: 5px 0;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #2a5d9f;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #2d572c;
+    }
+  </style>
+</head>
+<body class="pagina">
+
+<div class="quiz-container">
+  <h1>Quiz: Regiunile Asiei</h1>
+  <form id="quizForm">
+    <div class="question">
+      <p><strong>1. Ce țară se află în Asia de Sud?</strong></p>
+      <label><input type="radio" name="q1" value="corect"> India</label>
+      <label><input type="radio" name="q1" value="gresit"> Mongolia</label>
+      <label><input type="radio" name="q1" value="gresit"> Japonia</label>
+    </div>
+
+    <div class="question">
+      <p><strong>2. Care este cea mai populată regiune a Asiei?</strong></p>
+      <label><input type="radio" name="q2" value="gresit"> Asia Centrală</label>
+      <label><input type="radio" name="q2" value="corect"> Asia de Est</label>
+      <label><input type="radio" name="q2" value="gresit"> Asia de Sud-Est</label>
+    </div>
+
+    <div class="question">
+      <p><strong>3. În ce regiune se află deșerturile Karakum și Kyzylkum?</strong></p>
+      <label><input type="radio" name="q3" value="corect"> Asia Centrală</label>
+      <label><input type="radio" name="q3" value="gresit"> Orientul Mijlociu</label>
+      <label><input type="radio" name="q3" value="gresit"> Asia de Sud</label>
+    </div>
+
+    <div class="question">
+      <p><strong>4. Ce regiune asiatică este formată din multe insule și arhipelaguri?</strong></p>
+      <label><input type="radio" name="q4" value="corect"> Asia de Sud-Est</label>
+      <label><input type="radio" name="q4" value="gresit"> Asia de Nord</label>
+      <label><input type="radio" name="q4" value="gresit"> Asia Centrală</label>
+    </div>
+
+    <div class="question">
+      <p><strong>5. Ce regiune este bogată în petrol și are ieșire la Golful Persic?</strong></p>
+      <label><input type="radio" name="q5" value="corect"> Orientul Mijlociu</label>
+      <label><input type="radio" name="q5" value="gresit"> Asia de Est</label>
+      <label><input type="radio" name="q5" value="gresit"> Asia de Sud-Est</label>
+    </div>
+
+    <button type="button" onclick="verifica()">Trimite răspunsurile</button>
+    <p class="result" id="rezultat"></p>
+  </form>
+</div>
+
+<script>
+  function verifica() {
+    const raspunsuri = document.querySelectorAll('input[type="radio"]:checked');
+    let punctaj = 0;
+
+    raspunsuri.forEach(r => {
+      if (r.value === "corect") punctaj++;
+    });
+
+    document.getElementById("rezultat").innerText = "Ai obținut " + punctaj + " din 5 puncte.";
+  }
+</script>
+
+</body>
+</html>

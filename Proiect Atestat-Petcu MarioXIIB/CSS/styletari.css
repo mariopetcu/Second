@@ -1,0 +1,81 @@
+body.pagina {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7fa;
+  color: #333;
+  margin: 40px;
+  line-height: 1.6;
+}
+
+h1 {
+  text-align: center;
+  color: #2a5d9f;
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: #1a3e6e;
+  margin-top: 30px;
+  font-size: 1.4em;
+}
+
+h3 {
+  color: #365a7d;
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+
+h4 {
+  display: inline;
+  color: #2d3e50;
+  font-weight: 600;
+}
+
+p, ul, ol {
+  max-width: 800px;
+  margin: 0 auto 20px auto;
+  padding: 0;
+}
+
+ul {
+  padding-left: 40px;
+  margin-top: 10px;
+}
+
+ol {
+  padding-left: 25px;
+  counter-reset: section;
+}
+
+ol > li {
+  counter-increment: section;
+  margin-top: 25px;
+  font-weight: bold;
+}
+
+ol > li::marker {
+  color: #2a5d9f;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+ul li::marker {
+  color: #4d7ea8;
+}
+
+br {
+  display: block;
+  content: "";
+  margin: 10px 0;
+}
+
+@media (max-width: 600px) {
+  body.pagina {
+    margin: 20px;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+}
